@@ -13,6 +13,7 @@ import MainLayout from './layouts/MainLayout';
 import ScrollToTop from './components/utils/ScrollToTop';
 import NotFound from './components/utils/NotFound';
 import Test from './components/Test';
+import Main from "./pages/Main";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -38,7 +39,8 @@ function App() {
             <ScrollToTop />
             <Switch>
               <PrivateRoute path="/admin" component={<h1>Admin</h1>} />
-              <Route exact path="/" component={Test} />
+              {/* <Route exact path="/" component={Test} /> */}
+              <Route exact path="/" component={Main} />
               <Route path="*" component={NotFound} />
             </Switch>
           </MainLayout>

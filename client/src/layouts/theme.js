@@ -17,7 +17,7 @@ const darkColors = {
   secondary: '#03DAC6',
   secondaryVariant: '#03DAC6',
   background: '#121212',
-  surface: '#121212',
+  surface: '#3700B3',
   error: '#CF6679',
   textOnPrimary: '#000000',
   textOnSecondary: '#000000',
@@ -38,6 +38,7 @@ const typography = {
   button: `font-family: 'Open Sans'; font-weight: 500; font-size: 14px; letter-spacing: 1.25px; text-transform: uppercase;`,
   caption: `font-family: 'Open Sans'; font-weight: 400; font-size: 12px; letter-spacing: 0.4px;`,
   overline: `font-family: 'Open Sans'; font-weight: 400; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;`,
+  
 };
 const zIndex = {
   levelMinus1: '-1000',
