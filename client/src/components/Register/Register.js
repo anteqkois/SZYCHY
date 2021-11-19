@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import Button from './Register/Button'
-import Input from './Register/Input'
+import React from 'react'
+import styled from 'styled-components'
+import Button from './Button'
+import Input from './Input'
 import { ReactComponent as Logo} from'./logo.svg'
 import { ReactComponent as Baner} from'./baner.svg'
-
-import useError from '../providers/ErrorContext';
-
 
 const MainDiv = styled.div`
   min-width: 100vw;
@@ -109,34 +106,33 @@ const BanerContainer = styled.div`
   margin-top: 1.5rem;
 `
 
-
-function Test() {
-  return (
-    <>
-      <MainDiv>
-          <MainContainer>
-            <BanerContainer>
-              <Baner />
-            </BanerContainer>
-          
-            <InputContainer>
-                <Input type="text" placeholder="Nazwa użytkownika" />
-                <Input type="text" placeholder="Email" />
-                <Input type="password" placeholder="Hasło" />
-            </InputContainer>
-            <ButtonContainer>
-                <ButtonOption>Uczeń</ButtonOption>
-                <ButtonOption>Nauczyciel</ButtonOption>
-            </ButtonContainer>
-            <ButtonContainer>
-                <Button content="Zarejestruj się"></Button>
-            </ButtonContainer>
-            <LoginWith>masz już konto? zaloguj się</LoginWith>
-            <Logo width="5.5rem" height="5.5rem" />
-          </MainContainer>
-      </MainDiv>
-    </>
-  );
+function Register() {
+    return (
+        <>
+            <MainDiv>
+                <MainContainer>
+                    <BanerContainer>
+                    <Baner />
+                    </BanerContainer>
+                
+                    <InputContainer>
+                        <Input type="text" placeholder="Nazwa użytkownika" />
+                        <Input type="text" placeholder="Email" />
+                        <Input type="password" placeholder="Hasło" />
+                    </InputContainer>
+                    <ButtonContainer>
+                        <ButtonOption>Uczeń</ButtonOption>
+                        <ButtonOption>Nauczyciel</ButtonOption>
+                    </ButtonContainer>
+                    <ButtonContainer>
+                        <Button content="Zarejestruj się"></Button>
+                    </ButtonContainer>
+                    <LoginWith>masz już konto? zaloguj się</LoginWith>
+                    <Logo width="5.5rem" height="5.5rem" />
+                </MainContainer>
+            </MainDiv>
+        </>
+    )
 }
 
-export default Test;
+export default Register

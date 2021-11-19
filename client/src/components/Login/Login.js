@@ -100,7 +100,7 @@ function Login() {
                 <ButtonContainer>
                     <Button content="Sign Up" />
                 </ButtonContainer>
-                <LoginWith>OR LOGIN WITH</LoginWith>
+                    <LoginWith>Załóż Konto</LoginWith>
                 </MainContainer>
             </MainDiv>
         </>
