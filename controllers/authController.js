@@ -12,7 +12,7 @@ const login = async (req, res, next) => {
 
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
-    !auth && next(createApiError(`incorrect password`, 400));
+    !auth && next(createApiError(`Nie poprawne hasło`, 400));
 
     const accessToken = jwt.sign({ email: email }, process.env.TOKEN_SECRET, {
       expiresIn: 3600,
@@ -31,9 +31,9 @@ const login = async (req, res, next) => {
       httpOnly: true,
     });
 
-    return res.status(200).send('You are successfuly logged');
+    return res.status(200).send('Zostałeś zalogowany !');
   }
-  !auth && next(createApiError(`incorrect email`, 400));
+  !auth && next(createApiError(`Nie poprwany e-mail`, 400));
 };
 
 const logout = (req, res) => {
@@ -42,27 +42,22 @@ const logout = (req, res) => {
     httpOnly: true,
   });
 
-  return res.status(200).send('You are successfuly logout');
+  return res.status(200).send('Zostałeś wylogowany !');
 };
 
 const signup = async (req, res, next) => {
-  !req.body.email && next(createApiError(`No require email`, 422));
-  !req.body.password && next(createApiError(`No require password`, 422));
+  !req.body.email && next(createApiError(`Brak e-maila`, 422));
+  !req.body.password && next(createApiError(`Brak hasła`, 422));
+  !req.body.nick && next(createApiError(`Brak nazwy`, 422));
 
-  const { email, password } = req.body;
+  const { email, password, nick } = req.body;
 
-  const user = await User.create({ email, password });
+  const user = await User.create({ email, password, nick });
 
-  !req.body.email &&
-    next(createApiError(`Something went wrong, user wasn't create !`, 500));
+  // user &&
+  //   next(createApiError(`Something went wrong, user wasn't create !`, 500));
 
   next();
 };
 
 export default { login, logout, signup };
-
-// const refreshToken = async (req, res, next) => {
-//   // Nie potrzebna funkcja przy tej skali projektu (lepiej czas przeznaczyć na coś innego)
-
-//   !req.cookies.JWT && next(createApiError(`Nie poprawny login lub hasło`, 400));
-// };
