@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import Button from './Login/Button'
-import Input from './Login/Input'
-
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Button from './Button';
+import Input from './Input';
+import { useFormik } from 'formik';
 
 const MainDiv = styled.div`
   min-width: 100vw;
@@ -11,9 +11,9 @@ const MainDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  `
+`;
 
-const MainContainer = styled.div`
+const MainContainer = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -87,24 +87,56 @@ const LoginWith = styled.h5`
   cursor: pointer;
 `;
 
+// const initialState = {
+//   email: '',
+//   password: '',
+// };
+
 function Login() {
-    return (
-        <>
-            <MainDiv>
-                <MainContainer>
-                <WelcomeText>NowFuture</WelcomeText>
-                <InputContainer>
-                    <Input type="text" placeholder="Email" />
-                    <Input type="password" placeholder="Password" />
-                </InputContainer>
-                <ButtonContainer>
-                    <Button content="Sign Up" />
-                </ButtonContainer>
-                <LoginWith>OR LOGIN WITH</LoginWith>
-                </MainContainer>
-            </MainDiv>
-        </>
-    )
+  const [isLoading, setIsLoading] = useState(true);
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    onSubmit: (values, { setSubmitting, resetForm }) => {
+      resetForm();
+    },
+    enableReinitialize: true,
+  });
+
+  return (
+    <>
+      <MainDiv>
+        <MainContainer onSubmit={formik.handleSubmit}>
+          <WelcomeText>NowFuture</WelcomeText>
+          <InputContainer>
+            <Input
+              type="text"
+              placeholder="Email"
+              id="email"
+              name="email"
+              onChange={formik.handleChange}
+              value={formik.values.email}
+            />
+            <Input
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+              onChange={formik.handleChange}
+              value={formik.values.email}
+            />
+          </InputContainer>
+          <ButtonContainer>
+            <Button content="Sign Up" />
+          </ButtonContainer>
+          <LoginWith>OR LOGIN WITH</LoginWith>
+        </MainContainer>
+      </MainDiv>
+    </>
+  );
 }
 
-export default Login
+export default Login;

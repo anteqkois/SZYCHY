@@ -1,31 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import { DarkTheme, LightTheme } from '../layouts/theme';
+
+import userApi from '../api/userAPI.js';
 
 export const UserContext = React.createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [user, setUser] = useState({
-    emial: 'email',
-    nick: 'nickl'
+    emial: 'twojemail@gmail.com',
+    nick: 'twojnick123',
   });
 
-  const handleLogin = () =>{
-    
-  }
+
   
-    const handleLogut= () =>{
-  
-    }
+  const handleLogin = async (values) => {
+    await userApi
+      .login(values)
+      .then(({ data }) => {
+        console.log(data)
+      })
+      .catch((error) => {
+        setError(error.response.data);
+        setOption(OPTION_TYPE.normal);
+      });
+  };
 
-  const handleSignup= () =>{
+  const handleLogut = () => {};
 
-  }
-
+  const handleSignup = () => {};
 
   return (
     <UserContext.Provider
       value={{
-        user: user,
+        user,
+        setUser,
+        handleLogin,
+        handleLogut,
+        handleSignup,
       }}
     >
       {children}
