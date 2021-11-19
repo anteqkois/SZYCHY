@@ -15,7 +15,5 @@ router.post(
   catchAsyncErrors(authController.login),
 );
 
-// na później
-// router.post('/refresh', catchAsyncErrors(authController.refreshToken));
 
 export default router;
