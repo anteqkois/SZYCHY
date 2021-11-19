@@ -11,6 +11,7 @@ const StyledHeader = styled.div`
     justify-content: space-between;
     width:calc(100% - 300px);
     padding:0.5vw 2vw;
+    position: sticky;
 
     /* display:flex;
     justify-content: space-between;
