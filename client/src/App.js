@@ -40,7 +40,6 @@ function App() {
               {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
               <Route exact path="/" component={Login} />
               {/* <Route path="*" component={NotFound} /> */}
-              <Route exact path="/add" component={Add} />
             </Switch>
           </MainLayout>
         </ErrorProvider>

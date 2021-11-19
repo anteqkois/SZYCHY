@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import Input from './Input';
-import { useFormik } from 'formik';
 
 const MainDiv = styled.div`
   min-width: 100vw;
@@ -13,7 +12,7 @@ const MainDiv = styled.div`
   justify-content: center;
 `;
 
-const MainContainer = styled.form`
+const MainContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -87,46 +86,36 @@ const LoginWith = styled.h5`
   cursor: pointer;
 `;
 
-// const initialState = {
-//   email: '',
-//   password: '',
-// };
+const initialUser = {
+  email: '',
+  password: '',
+};
 
 function Login() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [user, setUser] = useState(initialUser);
 
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    onSubmit: (values, { setSubmitting, resetForm }) => {
-      resetForm();
-    },
-    enableReinitialize: true,
-  });
+  const emial = useRef()
+  const password = useRef()
+
+
 
   return (
     <>
       <MainDiv>
-        <MainContainer onSubmit={formik.handleSubmit}>
+        <MainContainer>
           <WelcomeText>NowFuture</WelcomeText>
           <InputContainer>
             <Input
+              ref={emial}
               type="text"
               placeholder="Email"
-              id="email"
-              name="email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
+              // onChange={emialChange}
             />
             <Input
+              ref={password}
               type="password"
               placeholder="Password"
-              id="password"
-              name="password"
-              onChange={formik.handleChange}
-              value={formik.values.email}
+              // onChange={passwordChange}
             />
           </InputContainer>
           <ButtonContainer>
