@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.textOnBackground};
+    font-family: 'Poppins';
     overflow-x: hidden;
     scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
