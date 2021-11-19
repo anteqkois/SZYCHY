@@ -33,20 +33,21 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 function App() {
   return (
     <ThemeProvider>
-      <Router>
-        <ErrorProvider>
-          <MainLayout>
-            <ScrollToTop />
-            <Switch>
-              {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
-              <Route exact path="/" component={Login} />
-
-              <Route exact path="/main" component={Main} />
-              {/* <Route path="*" component={NotFound} /> */}
-            </Switch>
-          </MainLayout>
-        </ErrorProvider>
-      </Router>
+      <UserProvider>
+        <Router>
+          <ErrorProvider>
+            <MainLayout>
+              <ScrollToTop />
+              <Switch>
+                {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
+                <Route exact path="/" component={Login} />
+                <Route exact path="/main" component={Main} />
+                {/* <Route path="*" component={NotFound} /> */}
+              </Switch>
+            </MainLayout>
+          </ErrorProvider>
+        </Router>
+      </UserProvider>
     </ThemeProvider>
   );
 }
