@@ -1,21 +1,46 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledHeader1 = styled.h1`
-    color: ${({ theme }) => theme.colors.textOnBackground};
-    ${({ theme }) => theme.typography.H4};
+const StyledHeader = styled.div`
+    background:#0b0b0b;
     margin-left:300px;
+    color:black;
+    position:fixed;
     padding:20px;
-    padding-left:100px;
-    border-bottom:2px solid white;
-    display:block;
-    width:100vw;
-`;
+    display:flex;
+    justify-content: space-between;
+    width:calc(100% - 300px);
+    padding:0.5vw 2vw;
 
+    /* display:flex;
+    justify-content: space-between;
+    align-items: center; */
+    `;
+
+const HeaderButton = styled.div`
+    ${({ theme }) => theme.typography.H6};
+    width:100%;
+    display:inline;
+    padding:5px;
+    margin:15px;
+    color:white;
+    opacity:0.9;
+    &:hover{
+        cursor:pointer;
+        opacity: 1;
+    }
+`;
 
 function Header(){
     return(
-        <StyledHeader1>NowFuture</StyledHeader1>
+        <StyledHeader>
+            <HeaderButton>Matematyka</HeaderButton>
+            <HeaderButton>Polski</HeaderButton>
+            <HeaderButton>Angielski</HeaderButton>
+            <HeaderButton>Programowanie</HeaderButton>
+            <HeaderButton>Informatyka</HeaderButton>
+            <HeaderButton>Mechatronika</HeaderButton>
+        </StyledHeader>
     );
 }
 
