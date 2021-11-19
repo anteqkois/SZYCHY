@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from 'react';
-
-import userApi from '../api/userAPI.js';
+import axios from 'axios';
 
 export const UserContext = React.createContext();
 
-export const ThemeProvider = ({ children }) => {
-  const [user, setUser] = useState({
-    emial: 'twojemail@gmail.com',
-    nick: 'twojnick123',
-  });
+export const UserProvider = ({ children }) => {
+  const [user, setUser] = useState({});
 
-
-  
   const handleLogin = async (values) => {
-    await userApi
-      .login(values)
-      .then(({ data }) => {
-        console.log(data)
+    await axios
+      .post('/api/v1/auth/login', values)
+      .then((data) => {
+        setUser(data.data);
+        sessionStorage.setItem('isLogined', true);
       })
       .catch((error) => {
-        setError(error.response.data);
-        setOption(OPTION_TYPE.normal);
+        console.log(error);
       });
   };
+
+  useEffect(() => {
+    console.log(user);
+  }, []);
 
   const handleLogut = () => {};
 

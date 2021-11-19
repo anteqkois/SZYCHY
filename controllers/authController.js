@@ -9,6 +9,7 @@ const login = async (req, res, next) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email });
+  console.log(req.body, user);
 
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
@@ -31,7 +32,7 @@ const login = async (req, res, next) => {
       httpOnly: true,
     });
 
-    return res.status(200).send('Zostałeś zalogowany !');
+    return res.status(200).send(user);
   }
   !auth && next(createApiError(`Nie poprwany e-mail`, 400));
 };
