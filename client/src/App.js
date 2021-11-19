@@ -8,12 +8,12 @@ import {
 
 import { ThemeProvider } from './providers/ThemeContext';
 import { ErrorProvider } from './providers/ErrorContext';
+import { UserProvider } from './providers/UserContext';
 
 import MainLayout from './layouts/MainLayout';
 import ScrollToTop from './components/utils/ScrollToTop';
-import NotFound from './components/utils/NotFound';
-import Login from './components/Login/Login';
-
+// import NotFound from './components/utils/NotFound';
+import Login from './components/NewLogin/Login.js';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -22,9 +22,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       sessionStorage.getItem('isLogined') ? (
         <Component {...props} />
       ) : (
-        <Redirect
-          to={{ pathname: '/', state: { from: props.location } }}
-        />
+        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
       )
     }
   />
@@ -33,18 +31,20 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 function App() {
   return (
     <ThemeProvider>
-      <Router>
-        <ErrorProvider>
-          <MainLayout>
-            <ScrollToTop />
-            <Switch>
-              {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
-              <Route exact path="/" component={Login} />
-              {/* <Route path="*" component={NotFound} /> */}
-            </Switch>
-          </MainLayout>
-        </ErrorProvider>
-      </Router>
+      <UserProvider>
+        <Router>
+          <ErrorProvider>
+            <MainLayout>
+              <ScrollToTop />
+              <Switch>
+                {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
+                <Route exact path="/" component={Login} />
+                {/* <Route path="*" component={NotFound} /> */}
+              </Switch>
+            </MainLayout>
+          </ErrorProvider>
+        </Router>
+      </UserProvider>
     </ThemeProvider>
   );
 }
