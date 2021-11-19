@@ -1,7 +1,7 @@
 {
   "name": "szychy",
   "version": "1.0.0",
-  "description": "It's my own boilerplate to mern stack projects, to quick start and to get basic settings.",
+  "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anteqkois/mern-boilerplate.git"
+    "url": "git+https://github.com/anteqkois/szychy.git"
   },
   "author": "Antek Kois",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anteqkois/mern-boilerplate/issues"
+    "url": "https://github.com/anteqkois/szychy/issues"
   },
-  "homepage": "https://github.com/anteqkois/mern-boilerplate#readme",
+  "homepage": "https://github.com/anteqkois/szychy#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
