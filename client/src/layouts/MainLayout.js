@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 90ch;
   }
   body{
     background-color: ${({ theme }) => theme.colors.background};
@@ -18,10 +17,6 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  }
-  *:focus{
-    outline: dashed 2px green;
-    outline-offset: 2px;
   }
 `;
 
