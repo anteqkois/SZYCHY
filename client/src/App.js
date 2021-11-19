@@ -12,7 +12,7 @@ import { ErrorProvider } from './providers/ErrorContext';
 import MainLayout from './layouts/MainLayout';
 import ScrollToTop from './components/utils/ScrollToTop';
 import NotFound from './components/utils/NotFound';
-import Test from './components/Test';
+import Login from './components/Login/Login';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -22,7 +22,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
         <Component {...props} />
       ) : (
         <Redirect
-          to={{ pathname: '/login', state: { from: props.location } }}
+          to={{ pathname: '/', state: { from: props.location } }}
         />
       )
     }
@@ -37,9 +37,9 @@ function App() {
           <MainLayout>
             <ScrollToTop />
             <Switch>
-              <PrivateRoute path="/admin" component={<h1>Admin</h1>} />
-              <Route exact path="/" component={Test} />
-              <Route path="*" component={NotFound} />
+              {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
+              <Route exact path="/" component={Login} />
+              {/* <Route path="*" component={NotFound} /> */}
             </Switch>
           </MainLayout>
         </ErrorProvider>
