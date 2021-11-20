@@ -1,12 +1,8 @@
-
 import React from "react";
-// import Post from "../containers/content/posts/Post";
-import Content from "../containers/content/Content";
-import Header from '../containers/header/Header';
 import Navbar from "../containers/navigation/Navigation";
-
-
-function Main(){
+import Header from "../containers/header/Header";
+import Content from "../containers/content/Content";
+function Discussion(){
     return(
         <div className="row">
             <div className="col-3">
@@ -18,7 +14,6 @@ function Main(){
             </div>
         </div>
     );
-
 }
 
-export default Main;
+export default Discussion;

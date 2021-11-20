@@ -24,8 +24,6 @@ function Post(props){
             <Category category={props.category}></Category>
             <Title title={props.title}></Title>
             <ContentPost contentPost={props.contentPost}></ContentPost>
-            <User user={props.user}></User>
-            <Answer/>
             <Comment />
         </StyledPost>
     );
