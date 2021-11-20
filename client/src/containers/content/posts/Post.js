@@ -4,12 +4,13 @@ import Title from "./Title";
 import Category from "./Category";
 import styled from "styled-components";
 import User from "./User";
+import Comment from "./Comment";
 
 const StyledPost = styled.div`
     background:#222222;
     width:70%;
     margin:40px auto;
-    padding:15px;
+    padding:20px;
     padding-bottom:50px;
     border: none;
     outline: none;
@@ -19,10 +20,11 @@ const StyledPost = styled.div`
 function Post(props){
     return(
         <StyledPost>
+            <User user={props.user}></User>
             <Category category={props.category}></Category>
             <Title title={props.title}></Title>
             <ContentPost contentPost={props.contentPost}></ContentPost>
-            <User user={props.user}></User>
+            <Comment />
         </StyledPost>
     );
 }

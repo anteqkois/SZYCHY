@@ -6,11 +6,15 @@ const StyledCategory = styled.h6`
     display:inline;
     float:right;
     margin-right:10px;
-    color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 1px 4px 0 ${({ theme }) => theme.colors.primary};
-    padding: 0 5px;
+    color: #fff;
+    box-shadow: 0 1px 4px 0 #fff;
+    padding: 10px;
+    border-radius: 15px;
     &:hover{
+        transition: .3s;
         cursor:pointer;
+        color: #BB86FC;
+        box-shadow: 0 1px 4px 0 #BB86FC;
     }
 `;
 
