@@ -7,11 +7,6 @@ const StyledContent = styled.div`
   margin-left: 300px;
   color: white;
   margin-top: 60px;
-
-  @media screen and (max-width: 764px) {
-    margin-left: 0;
-    width: 100%;
-  }
 `;
 
 const initialPost = [
@@ -23,13 +18,14 @@ const initialPost = [
   },
 ];
 
-function Content() {
+function ContentCategories({category}) {
   const [post, setPost] = useState(initialPost);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get('/api/v1/post');
+      const { data } = await axios.get(`/api/v1/post/${category}`);
+      console.log(data);
       setPost(data);
       setIsLoading(false);
     })();
@@ -51,4 +47,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default ContentCategories;

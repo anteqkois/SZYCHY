@@ -20,7 +20,7 @@ export const UserProvider = ({ children }) => {
       .then((data) => {
         setUser(data.data);
         sessionStorage.setItem('isLogined', true);
-        history.push('/main');
+        history.push('/post');
       })
       .catch((error) => {
         console.log(error);
