@@ -47,4 +47,4 @@ function Comment() {
     )
 }
 
-export default Comment
+export default Comment;

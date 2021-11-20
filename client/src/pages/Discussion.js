@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../containers/navigation/Navigation";
 import Header from "../containers/header/Header";
-import Content from "../containers/content/Content";
+import ContentDiscussion from "../containers/discussion/ContentDiscussion";
+
 function Discussion(){
     return(
         <div className="row">
@@ -10,7 +11,7 @@ function Discussion(){
             </div>
             <div>
                 <Header />
-                <Content />
+                <ContentDiscussion/>
             </div>
         </div>
     );
