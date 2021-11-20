@@ -26,7 +26,7 @@ function DiscussionModel(props){
             <Title title={props.title}></Title>
             <ContentPost contentPost={props.contentPost}></ContentPost>
 
-            {/* <Comment /> */}
+            <Comment />
 
             {state === 'start' && (
                 <AddCommentButton addComment={() => setState('add-comment')} />

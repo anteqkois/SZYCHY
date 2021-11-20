@@ -2,9 +2,18 @@ import database from '../config/database.js';
 
 import Post from '../database/models/post.js';
 
+const find = async (req, res, next) => {
+  // console.log(req.params.category);
+  const data = await Post.find({
+    category: req.params.category,
+  });
+
+  return res.status(200).send(data);
+};
+
 const findAll = async (req, res, next) => {
   const data = await Post.find();
-  // req.data = data;
+
   return res.status(200).send(data);
 };
 
@@ -19,4 +28,4 @@ const create = async (req, res, next) => {
   return res.status(201).send({ data: post });
 };
 
-export default { create, findAll };
+export default { create, findAll, find };

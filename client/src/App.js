@@ -43,13 +43,16 @@ function App() {
               <ScrollToTop />
               <Switch>
                 <Route exact path="/" component={Login} />
-                <Route exact path="/add" component={Add} />
                 <Route exact path="/main" component={Main} />
                 <Route exact path="/discussion" component={Discussion} />
                 <Route exact path="/statistic" component={Stats} />
                 {/* <PrivateRoute exact path="/add" component={Add} />
                 <PrivateRoute exact path="/main" component={Main} />
                 <PrivateRoute exact path="/add" component={Add} /> */}
+                <PrivateRoute exact path="/add" component={Add} />
+                <PrivateRoute exact path="/post" component={Main} />
+                <PrivateRoute exact path="/post/:category" component={Main} />
+                <PrivateRoute exact path="/add" component={Add} />
                 {/* <Route path="*" component={NotFound} /> */}
               </Switch>
             </MainLayout>

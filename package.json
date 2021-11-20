@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/anteqkois/szychy#readme",
   "dependencies": {
+    "@nivo/core": "^0.74.0",
+    "@nivo/line": "^0.74.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",

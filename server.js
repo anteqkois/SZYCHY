@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 //import routes
 import authRoutes from './routes/authRouter.js';
 import postRoutes from './routes/postRouter.js';
+import commentRoutes from './routes/commentRouter.js';
 
 //import middlewares
 import { notFound, catchErrors } from './middlewares/errors.js';
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/post', postRoutes);
+app.use('/api/v1/comment', commentRoutes);
 
 if (process.env.MODULE === 'production') {
   app.use(express.static(join(__dirname, 'client/build')));
