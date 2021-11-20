@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "../containers/navigation/Navigation";
 // import Post from "../containers/content/posts/Post";
@@ -13,6 +14,7 @@ function Main(){
             <Content></Content>
         </div>
     );
+
 }
 
 export default Main;
