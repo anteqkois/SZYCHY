@@ -9,6 +9,7 @@ import discuss from '../../icons/discuss.png';
 import notes from '../../icons/notes.png';
 import question from '../../icons/question.png';
 import results from '../../icons/results.png';
+import logout from '../../icons/logout.png';
 
 const StyledNavBar = styled.div`
   padding: ${({ theme }) => theme.spacing.xl1};
@@ -51,32 +52,34 @@ const StyledNavItem = styled.a`
   position: relative;
   &:hover {
     cursor: pointer;
+    background: linear-gradient(to right, transparent, #3700b3 40%);
     color: white;
-    transition: 200ms;
     opacity: 1;
   }
 `;
 
 const StyledNavLogout = styled.button`
-  padding: ${({ theme }) => theme.spacing.s};
-  border-radius: 2px;
+  color: #d3d3d3;
   display: block;
-  font-family: inherit;
-  font-size: 15px;
-  margin-top: 5rem;
-  margin-bottom: -1rem;
-  width: 100%;
-  color: white;
-  background-color: #3700b3;
-  outline: none;
-  border: 1px solid #3700b3;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  padding: 10px 10px;
   border-radius: 10px;
-  transition: 200ms;
+  background: #3700b3;
+  border:none;
+  width:100%;
+  text-decoration: none;
+  position: relative;
   &:hover {
-    background-color: #bb86fc;
-    color: #fff;
-    border: 1px solid #3700b3;
     cursor: pointer;
+    color: white;
+    transition: 200ms;
+    opacity: 1;
+  }
+  .ss{
+    position:absolute;
+    top:8px;
+    left:10px;
   }
 `;
 
@@ -151,6 +154,7 @@ function Navbar() {
           handleLogout();
         }}
       >
+        <img src={logout} className="ss" alt="icon" />
         Wyloguj się
       </StyledNavLogout>
 
