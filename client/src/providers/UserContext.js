@@ -32,7 +32,7 @@ export const UserProvider = ({ children }) => {
       .get('/api/v1/auth/logout')
       .then((data) => {
         setUser(initialUser);
-        sessionStorage.setItem('isLogined', false);
+        sessionStorage.removeItem('isLogined');
         history.push('/');
       })
       .catch((error) => {

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { UserContext } from './../../providers/UserContext';
+import { useHistory } from 'react-router-dom';
 
 const StyledNavBar = styled.div`
   padding: ${({ theme }) => theme.spacing.xl1};
@@ -44,6 +45,8 @@ const StyledNavLogout = styled.button`
 `;
 
 function Navbar() {
+  const history = useHistory();
+
   const { handleLogout } = useContext(UserContext);
   return (
     <StyledNavBar>
@@ -62,8 +65,10 @@ function Navbar() {
 
       <StyledNavItem>Strona główna</StyledNavItem>
       <StyledNavItem>Panel dyskusyjny</StyledNavItem>
-      <StyledNavItem>Zadaj pytanie</StyledNavItem>
-      <StyledNavItem>Moje wpisy</StyledNavItem>
+      <StyledNavItem onClick={() => history.push('/add')}>
+        Zadaj pytanie
+      </StyledNavItem>
+      <StyledNavItem onClick={() => history.push('')}>Moje wpisy</StyledNavItem>
       <StyledNavItem>Statystyki</StyledNavItem>
       <StyledNavLogout
         onClick={() => {

@@ -3,8 +3,12 @@ import styled from 'styled-components'
 import Navbar from '../../containers/navigation/Navigation'
 import Input from './Input'
 
+import { useFormik } from 'formik';
+import axios from 'axios';
+import { UserContext } from './../../providers/UserContext';
 
-const AddQuestion = styled.div`
+
+const AddQuestion = styled.form`
     float: right;
     width: calc(100% - 300px);
     min-height: 100vh;
@@ -79,7 +83,7 @@ function Add() {
             <AddQuestion>
                 <Topic>
                     <TopicMessage>Tytuł:</TopicMessage>
-                    <Input />
+                    <input />
                 </Topic>
                 <CategoryContainer>
                     <Category>Matematyka</Category>
