@@ -6,7 +6,7 @@ const CommentContainer = styled.div`
     width: 90%;
 `
 
-const Textarea = styled.textarea`
+const Textarea = styled.div`
     color: #fff;
     background: #121212;
     box-shadow: 0 2px 4px 0 #3700B3;
@@ -41,7 +41,6 @@ function AddComment() {
         <>
             <CommentContainer>
                 <Textarea />
-                <AddButton>+</AddButton>
             </CommentContainer>
         </>
     )
