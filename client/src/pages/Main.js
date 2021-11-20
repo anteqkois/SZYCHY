@@ -52,11 +52,8 @@ function Main({ match }) {
           <Content />
         )}
 
-        <ToUpContainer>
-          <ArrowIcon
-            src={Arrow}
-            onClick={() => window.scrollTo(0, 0)}
-          ></ArrowIcon>
+        <ToUpContainer onClick={() => window.scrollTo(0, 0)}>
+          <ArrowIcon src={Arrow}></ArrowIcon>
         </ToUpContainer>
       </div>
     </div>
