@@ -16,6 +16,7 @@ import ScrollToTop from './components/utils/ScrollToTop';
 // import NotFound from './components/utils/NotFound';
 import Login from './components/NewLogin/Login.js';
 import Main from './pages/Main';
+import Add from './components/AddQuestion/Add';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -42,6 +43,7 @@ function App() {
                 {/* <PrivateRoute path="/admin" component={<h1>Admin</h1>} /> */}
                 <Route exact path="/" component={Login} />
                 <Route exact path="/main" component={Main} />
+                <Route exact path="/add" component={Add} />
                 {/* <Route path="*" component={NotFound} /> */}
               </Switch>
             </MainLayout>
