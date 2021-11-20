@@ -100,10 +100,8 @@ function Add() {
   const [category, setCategory] = useState('matematyka');
   const history = useHistory();
 
-  const { user } = useContext(UserContext);
-
   const handleAddPost = async (values) => {
-    const { nick } = user;
+    const nick = sessionStorage.getItem('nick');
 
     const post = {
       ...values,

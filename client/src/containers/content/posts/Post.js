@@ -22,19 +22,19 @@ const StyledPost = styled.div`
 function Post(props){
     const [state, setState] = useState('start');
 
-    return(
-        <StyledPost>
-            <User user={props.user}></User>
-            <Category category={props.category}></Category>
-            <Title title={props.title}></Title>
-            <ContentPost contentPost={props.contentPost}></ContentPost>
+    return (
+      <StyledPost>
+        <User user={props.user}></User>
+        <Category category={props.category}></Category>
+        <Title title={props.title}></Title>
+        <ContentPost contentPost={props.contentPost}></ContentPost>
 
-            {state === 'start' && (
-                <AddCommentButton addComment={() => setState('add-comment')} />
-            )}
+        {state === 'start' && (
+          <AddCommentButton addComment={() => setState('add-comment')} />
+        )}
 
-            {state === 'add-comment' && <Comment />}
-        </StyledPost>
+        {state === 'add-comment' && <Comment title={props.title} />}
+      </StyledPost>
     );
 }
 export default Post;
