@@ -5,6 +5,7 @@ const StyledTitle = styled.h2`
     ${({ theme }) => theme.typography.H5};
     text-align: left;
     padding-left:50px;
+    margin-top: 1.2rem;
     &:hover{
         cursor:default;
     }

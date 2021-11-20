@@ -5,6 +5,7 @@ import Category from "./Category";
 import styled from "styled-components";
 import User from "./User";
 import Answer from "./Answer";
+import Comment from "./Comment";
 
 const StyledPost = styled.div`
     background:#222222;
@@ -19,11 +20,13 @@ const StyledPost = styled.div`
 function Post(props){
     return(
         <StyledPost>
+            <User user={props.user}></User>
             <Category category={props.category}></Category>
             <Title title={props.title}></Title>
             <ContentPost contentPost={props.contentPost}></ContentPost>
             <User user={props.user}></User>
             <Answer/>
+            <Comment />
         </StyledPost>
     );
 }
