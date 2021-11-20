@@ -17,10 +17,9 @@ import ScrollToTop from './components/utils/ScrollToTop';
 import Login from './components/NewLogin/Login.js';
 import Main from './pages/Main';
 import Add from './components/AddQuestion/Add';
-import Stats from './components/Stats/Stats';
+import Stats from './components/Stats/Stats.js';
 import Register from './components/NewLogin/Register';
 import Discussion from './pages/Discussion';
-
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
