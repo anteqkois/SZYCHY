@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledUser = styled.span`
-    float:right;
     margin-right:40px;
     margin-top:10px;
     &:hover{
