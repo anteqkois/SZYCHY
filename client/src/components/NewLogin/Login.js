@@ -26,7 +26,7 @@ const StyledContainer = styled.div`
     outline: none;
     color: #fff;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: medium;
     &:focus {
       background: #222222;
       display: inline-block;

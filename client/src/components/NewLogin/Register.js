@@ -26,7 +26,7 @@ const StyledContainer = styled.div`
     outline: none;
     color: #fff;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: medium;
     &:focus {
       background: #222222;
       display: inline-block;
@@ -149,7 +149,7 @@ function Register() {
           value={formik.values.password}
         />
         <button type="submit">Załóż konto !</button>
-        <LoginWith onClick={() => history.push('/signup')}>
+        <LoginWith onClick={() => history.push('/')}>
           Zaloguj się !
         </LoginWith>
 
