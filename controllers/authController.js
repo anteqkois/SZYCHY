@@ -9,14 +9,13 @@ const login = async (req, res, next) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email });
-  console.log(req.body, user);
 
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
     !auth && next(createApiError(`Nie poprawne hasło`, 400));
 
     const accessToken = jwt.sign({ email: email }, process.env.TOKEN_SECRET, {
-      expiresIn: 3600,
+      expiresIn: 36000,
     });
 
     const refreshToken = jwt.sign(
