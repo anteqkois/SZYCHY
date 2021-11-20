@@ -15,9 +15,10 @@ const Topic = styled.div`
 `
 
 const TopicMessage = styled.a`
+    font-weight: 550;
     display: inline-block;
     align-items: center;
-    width: 100px;
+    width: 10vw;
     height: 60px;
     font-size: 1.5rem;
 `
@@ -29,9 +30,10 @@ const CategoryContainer = styled.div`
 
 const Category = styled.button`
     font-family: inherit;
+    font-size: 1.2rem;
     color: #fff;
-    margin-right: 2rem;
-    padding: 0.6rem 2rem;
+    margin-right: 2.5rem;
+    padding: 1rem 2.5rem;
     border: none;
     border-radius: 12px;
     background: transparent;
@@ -46,11 +48,12 @@ const Category = styled.button`
 const Textarea = styled.textarea`
     background: #222222;
     color: #fff;
+    font-size: 1.2rem;
     border: none;
     outline: none;
     box-shadow: 0 2px 4px 0 #3700B3;
-    width: 1235px;
-    height: 430px;
+    width: 80vw;
+    height: 60vh;
     resize: none;
     margin: 4rem 2rem;
     padding: 0.5rem;

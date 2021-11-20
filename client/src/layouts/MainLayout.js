@@ -19,6 +19,20 @@ const GlobalStyle = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   }
+
+  ::-webkit-scrollbar {
+  width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+
+    ::-webkit-scrollbar-thumb {
+    background: #3700B3; 
+    border-radius: 10px;
+  }
 `;
 
 const Layout = ({ children }) => {

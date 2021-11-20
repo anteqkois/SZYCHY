@@ -79,16 +79,6 @@ const LoginWith = styled.h5`
 
 function Login() {
   const { handleLogin } = useContext(UserContext);
-  // const handleLogin = async (values) => {
-  //   await axios
-  //     .post('/api/v1/auth/login', values)
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
 
   const formik = useFormik({
     initialValues: {
