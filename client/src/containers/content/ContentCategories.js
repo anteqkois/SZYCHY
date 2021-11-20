@@ -25,7 +25,6 @@ function ContentCategories({category}) {
   useEffect(() => {
     (async () => {
       const { data } = await axios.get(`/api/v1/post/${category}`);
-      console.log(data);
       setPost(data);
       setIsLoading(false);
     })();
