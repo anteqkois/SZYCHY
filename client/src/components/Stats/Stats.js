@@ -180,7 +180,7 @@ function Stats() {
         <h1 className="text-center p-5">
           Sprawdź wyniki twoich znajomych
         </h1>
-        <div className="p-5" style={{height:"75vh"}}>
+        <div className="p-5 text-dark bg-light" style={{height:"80vh"}}>
           <MyResponsiveLine data={data}/>
         </div>
       </div>
