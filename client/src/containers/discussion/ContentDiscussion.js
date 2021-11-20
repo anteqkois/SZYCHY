@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import DiscussionModel from './DiscussionModel';
 
+
 const StyledContent = styled.div`
   margin-left: 300px;
   color: white;
