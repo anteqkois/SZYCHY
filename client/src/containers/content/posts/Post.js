@@ -5,6 +5,8 @@ import Category from "./Category";
 import styled from "styled-components";
 import User from "./User";
 import Comment from "./Comment";
+import AddCommentButton from "./AddCommentButton";
+import { useState } from "react";
 
 const StyledPost = styled.div`
     background:#222222;
@@ -18,13 +20,20 @@ const StyledPost = styled.div`
 `;
 
 function Post(props){
+    const [state, setState] = useState('start');
+
     return(
         <StyledPost>
             <User user={props.user}></User>
             <Category category={props.category}></Category>
             <Title title={props.title}></Title>
             <ContentPost contentPost={props.contentPost}></ContentPost>
-            <Comment />
+
+            {state === 'start' && (
+                <AddCommentButton addComment={() => setState('add-comment')} />
+            )}
+
+            {state === 'add-comment' && <Comment />}
         </StyledPost>
     );
 }
