@@ -4,8 +4,9 @@ import Title from "../content/posts/Title";
 import ContentPost from "../content/posts/ContentPost";
 import User from "../content/posts/User";
 import { useState } from "react";
-import AddCommentButton from "../content/posts/AddCommentButton";
-import Comment from "../content/posts/Comment";
+import AddCommentButton from "./AddCommentButton";
+import Comment from "./Comment";
+import AddComment from "./AddComment";
 
 const StyledDiscussion = styled.div` 
     background:#222222;
@@ -26,7 +27,7 @@ function DiscussionModel(props){
             <Title title={props.title}></Title>
             <ContentPost contentPost={props.contentPost}></ContentPost>
 
-            <Comment />
+            <AddComment />
 
             {state === 'start' && (
                 <AddCommentButton addComment={() => setState('add-comment')} />

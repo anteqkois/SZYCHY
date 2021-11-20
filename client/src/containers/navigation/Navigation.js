@@ -62,6 +62,7 @@ const StyledNavLogout = styled.button`
   display: block;
   font-size: 15px;
   margin-top: 5rem;
+  margin-bottom: -1rem;
   width: 100%;
   color: white;
   background-color: #3700b3;
@@ -76,6 +77,38 @@ const StyledNavLogout = styled.button`
     cursor: pointer;
   }
 `;
+
+const MessageContainer = styled.div`
+  padding: 1rem;
+  display: block;
+  font-size: 15px;
+  margin-top: 2rem;
+  width: 100%;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  transition: 200ms;
+`
+const Message = styled.p`
+  font-size: 1rem;
+`
+
+const UsernameContainer = styled.div`
+  padding: 0 1rem 0 1rem;
+  display: block;
+  font-size: 15px;
+  margin-top: -1rem;
+  width: 100%;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  transition: 200ms;
+`
+
+const Username = styled.p`
+  font-size: 1rem;
+  color: #BB86FC;
+`
 
 function Navbar() {
   const history = useHistory();
@@ -113,9 +146,15 @@ function Navbar() {
       >
         Wyloguj się
       </StyledNavLogout>
-      {nick}
 
-      <img src={logo} alt="logo" className="mt-5 logo" />
+      <MessageContainer>
+        <Message>Zalogowano jako:</Message>
+      </MessageContainer>
+      <UsernameContainer>
+        <Username>{nick}</Username>
+      </UsernameContainer>
+
+      <img src={logo} alt="logo" className="logo" />
     </StyledNavBar>
   );
 }
