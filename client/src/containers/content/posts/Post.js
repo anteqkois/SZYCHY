@@ -31,6 +31,8 @@ function Post(props){
         <Title title={props.title}></Title>
         <ContentPost contentPost={props.contentPost}></ContentPost>
 
+        <Comment />
+
         {state === 'start' && (
           <AddCommentButton addComment={() => setState('add-comment')} />
         )}
