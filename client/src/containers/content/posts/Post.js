@@ -30,7 +30,6 @@ function Post(props) {
   useEffect(() => {
     (async () => {
       const { data } = await axios.get(`/api/v1/comment/${props.title}`);
-      console.log(data);
       setComments(data);
       setIsLoading(false);
     })();
@@ -39,7 +38,9 @@ function Post(props) {
   return (
     <StyledPost>
       <User user={props.user}></User>
-      <Category category={props.category}></Category>
+      <Category
+        category={props.category}
+      ></Category>
       <Title title={props.title}></Title>
       <ContentPost contentPost={props.contentPost}></ContentPost>
 

@@ -31,6 +31,7 @@ const StyledNavBar = styled.div`
   }
   .logoText {
     margin-bottom: 50px;
+    cursor: pointer;
   }
   .logo {
     position: fixed;
@@ -89,10 +90,10 @@ const MessageContainer = styled.div`
   outline: none;
   border-radius: 10px;
   transition: 200ms;
-`
+`;
 const Message = styled.p`
   font-size: 1rem;
-`
+`;
 
 const UsernameContainer = styled.div`
   padding: 0 1rem 0 1rem;
@@ -104,12 +105,12 @@ const UsernameContainer = styled.div`
   outline: none;
   border-radius: 10px;
   transition: 200ms;
-`
+`;
 
 const Username = styled.p`
   font-size: 1rem;
-  color: #BB86FC;
-`
+  color: #bb86fc;
+`;
 
 function Navbar() {
   const history = useHistory();
@@ -118,7 +119,12 @@ function Navbar() {
   const { handleLogout } = useContext(UserContext);
   return (
     <StyledNavBar>
-      <img src={logoText} className="logoText" alt="logoText" />
+      <img
+        src={logoText}
+        onClick={() => history.push('/post')}
+        className="logoText"
+        alt="logoText"
+      />
 
       <StyledNavItem onClick={() => history.push('/post')}>
         <img src={homeIcon} className="ss" alt="icon" />
@@ -132,7 +138,7 @@ function Navbar() {
         <img src={question} className="ss" alt="icon" />
         <span>Zadaj pytanie</span>
       </StyledNavItem>
-      <StyledNavItem onClick={() => history.push('/mypost')}>
+      <StyledNavItem onClick={() => history.push(`/${nick}`)}>
         <img src={notes} className="ss" alt="icon" />
         <span>Moje wpisy</span>
       </StyledNavItem>

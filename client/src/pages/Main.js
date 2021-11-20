@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 // import Post from "../containers/content/posts/Post";
 import Content from '../containers/content/Content';
 import ContentCategories from '../containers/content/ContentCategories';
 import Header from '../containers/header/Header';
-import Navbar from "../containers/navigation/Navigation";
-import Arrow from '../icons/arrow.png'
+import Navbar from '../containers/navigation/Navigation';
+import Arrow from '../icons/arrow.png';
 
 const ToUpContainer = styled.button`
   position: fixed;
@@ -13,17 +13,17 @@ const ToUpContainer = styled.button`
   height: 48px;
   bottom: 35px;
   right: 35px;
-  background: #3700B3;
+  background: #3700b3;
   border: none;
   border-radius: 8px;
   padding: 1rem;
-`
+`;
 
 const ArrowIcon = styled.img`
   width: 100%;
   height: 100%;
   margin-bottom: 1rem;
-`
+`;
 
 // function Main(){
 //     return(
@@ -53,7 +53,10 @@ function Main({ match }) {
         )}
 
         <ToUpContainer>
-          <ArrowIcon src={Arrow}></ArrowIcon>
+          <ArrowIcon
+            src={Arrow}
+            onClick={() => window.scrollTo(0, 0)}
+          ></ArrowIcon>
         </ToUpContainer>
       </div>
     </div>

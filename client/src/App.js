@@ -16,6 +16,7 @@ import ScrollToTop from './components/utils/ScrollToTop';
 // import NotFound from './components/utils/NotFound';
 import Login from './components/NewLogin/Login.js';
 import Main from './pages/Main';
+import MainUser from './pages/MainUser';
 import Add from './components/AddQuestion/Add';
 import Stats from './components/Stats/Stats.js';
 import Register from './components/NewLogin/Register';
@@ -54,6 +55,7 @@ function App() {
                 <PrivateRoute exact path="/add" component={Add} />
                 <PrivateRoute exact path="/post" component={Main} />
                 <PrivateRoute exact path="/post/:category" component={Main} />
+                <PrivateRoute exact path="/:user" component={MainUser} />
                 <PrivateRoute exact path="/add" component={Add} />
                 {/* <Route path="*" component={NotFound} /> */}
               </Switch>
