@@ -6,6 +6,7 @@ import postController from '../controllers/postController.js';
 
 //GET
 router.get('/', postController.findAll);
+router.get('/:category', postController.find);
 
 //POST
 router.post('/', catchAsyncErrors(postController.create));

@@ -39,11 +39,13 @@ const StyledNavBar = styled.div`
 `;
 
 const StyledNavItem = styled.a`
+  color: #d3d3d3;
   display: block;
   opacity: 0.9;
-  margin-bottom:10px;
+  margin-bottom:1rem;
   padding:10px 10px;
-  background: linear-gradient(to right,transparent, rgba(13, 110, 253,0.25) 90%);
+  border-radius: 10px;
+  background: linear-gradient(to right,transparent, #3700B3 90%);
   text-decoration:none;
   position:relative;
   &:hover {
@@ -59,16 +61,18 @@ const StyledNavLogout = styled.button`
   border-radius: 2px;
   display: block;
   font-size: 15px;
+  margin-top: 5rem;
   width:100%;
   color: white;
-  background-color: #0d6efd;
+  background-color: #3700B3;
   outline:none;
-  border:1px solid #0d6efd;
+  border:1px solid #3700B3;
+  border-radius: 10px;
   transition: 200ms;
   &:hover {
-    background-color: transparent;
-    color:#0d6efd;
-    border:1px solid #0d6efd;
+    background-color: #BB86FC;
+    color:#fff;
+    border:1px solid #3700B3;
     cursor: pointer;
   }
 `;
@@ -81,7 +85,7 @@ function Navbar() {
     <StyledNavBar>
       <img src={logoText} className="logoText" alt="logoText" />
 
-      <StyledNavItem onClick={() => history.push('/main')}>
+      <StyledNavItem onClick={() => history.push('/post')}>
         <img src={homeIcon} className="ss" alt="icon" />
         <span>Strona główna</span>
       </StyledNavItem>

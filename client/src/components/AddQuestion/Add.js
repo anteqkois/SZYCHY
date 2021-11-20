@@ -114,7 +114,7 @@ function Add() {
     await axios
       .post('/api/v1/post', post)
       .then((data) => {
-        history.push('/main');
+        history.push('/post');
       })
       .catch((error) => {
         console.log(error);
