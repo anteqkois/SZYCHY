@@ -94,17 +94,18 @@ const Motto = styled.p`
   font-family: inherit;
 `;
 
-function Login() {
-  const { handleLogin } = useContext(UserContext);
+function Register() {
+  const { handleSignup } = useContext(UserContext);
   const history = useHistory();
 
   const formik = useFormik({
     initialValues: {
       email: '',
+      nick: '',
       password: '',
     },
     onSubmit: (values, { setSubmitting, resetForm }) => {
-      handleLogin(values);
+      handleSignup(values);
     },
     enableReinitialize: true,
   });
@@ -132,6 +133,14 @@ function Login() {
           value={formik.values.email}
         />
         <input
+          type="text"
+          placeholder="Nick"
+          id="nick"
+          name="nick"
+          onChange={formik.handleChange}
+          value={formik.values.nick}
+        />
+        <input
           type="password"
           placeholder="Password"
           id="password"
@@ -139,9 +148,9 @@ function Login() {
           onChange={formik.handleChange}
           value={formik.values.password}
         />
-        <button type="submit">Zaloguj się !</button>
+        <button type="submit">Załóż konto !</button>
         <LoginWith onClick={() => history.push('/signup')}>
-          Załóż konto
+          Zaloguj się !
         </LoginWith>
 
         <LogoContainer>
@@ -257,10 +266,9 @@ function Login() {
             </defs>
           </svg>
         </LogoContainer>
-        <Motto>"...Bo odpowiedzi szukamy w przyszłości"</Motto>
       </StyledForm>
     </StyledContainer>
   );
 }
 
-export default Login;
+export default Register;

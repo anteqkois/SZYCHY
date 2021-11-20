@@ -18,6 +18,7 @@ import Login from './components/NewLogin/Login.js';
 import Main from './pages/Main';
 import Add from './components/AddQuestion/Add';
 import Stats from './components/Stats/Stats';
+import Register from './components/NewLogin/Register';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -42,6 +43,7 @@ function App() {
               <ScrollToTop />
               <Switch>
                 <Route exact path="/" component={Login} />
+                <Route exact path="/signup" component={Register} />
                 <PrivateRoute exact path="/add" component={Add} />
                 <PrivateRoute exact path="/post" component={Main} />
                 <PrivateRoute exact path="/post/:category" component={Main} />

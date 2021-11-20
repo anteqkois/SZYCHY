@@ -46,18 +46,19 @@ const logout = (req, res) => {
 };
 
 const signup = async (req, res, next) => {
-  !req.body.email && next(createApiError(`Brak e-maila`, 422));
-  !req.body.password && next(createApiError(`Brak hasła`, 422));
-  !req.body.nick && next(createApiError(`Brak nazwy`, 422));
+  // !req.body.email && next(createApiError(`Brak e-maila`, 422));
+  // !req.body.password && next(createApiError(`Brak hasła`, 422));
+  // !req.body.nick && next(createApiError(`Brak nazwy`, 422));
 
   const { email, password, nick } = req.body;
+  console.log(req.body);
 
   const user = await User.create({ email, password, nick });
 
   // user &&
   //   next(createApiError(`Something went wrong, user wasn't create !`, 500));
-
-  next();
+  return res.status(200).send('Założyłeś konto !');
+  // next();
 };
 
 export default { login, logout, signup };

@@ -21,20 +21,20 @@ const StyledNavBar = styled.div`
   height: 100%;
   padding-top: 30px;
   position: fixed;
-  .ss{
-    position:absolute;
-    left:-7px;
-    top:6px;
+  .ss {
+    position: absolute;
+    left: -7px;
+    top: 6px;
   }
-  span{
-    padding-left:20px;
+  span {
+    padding-left: 20px;
   }
-  .logoText{
-    margin-bottom:50px;
+  .logoText {
+    margin-bottom: 50px;
   }
-  .logo{
-    position:fixed;
-    bottom:50px;
+  .logo {
+    position: fixed;
+    bottom: 50px;
   }
 `;
 
@@ -42,15 +42,15 @@ const StyledNavItem = styled.a`
   color: #d3d3d3;
   display: block;
   opacity: 0.9;
-  margin-bottom:1rem;
-  padding:10px 10px;
+  margin-bottom: 1rem;
+  padding: 10px 10px;
   border-radius: 10px;
-  background: linear-gradient(to right,transparent, #3700B3 90%);
-  text-decoration:none;
-  position:relative;
+  background: linear-gradient(to right, transparent, #3700b3 90%);
+  text-decoration: none;
+  position: relative;
   &:hover {
     cursor: pointer;
-    color:white;
+    color: white;
     transition: 200ms;
     opacity: 1;
   }
@@ -62,23 +62,24 @@ const StyledNavLogout = styled.button`
   display: block;
   font-size: 15px;
   margin-top: 5rem;
-  width:100%;
+  width: 100%;
   color: white;
-  background-color: #3700B3;
-  outline:none;
-  border:1px solid #3700B3;
+  background-color: #3700b3;
+  outline: none;
+  border: 1px solid #3700b3;
   border-radius: 10px;
   transition: 200ms;
   &:hover {
-    background-color: #BB86FC;
-    color:#fff;
-    border:1px solid #3700B3;
+    background-color: #bb86fc;
+    color: #fff;
+    border: 1px solid #3700b3;
     cursor: pointer;
   }
 `;
 
 function Navbar() {
   const history = useHistory();
+  const nick = sessionStorage.getItem('nick');
 
   const { handleLogout } = useContext(UserContext);
   return (
@@ -112,6 +113,8 @@ function Navbar() {
       >
         Wyloguj się
       </StyledNavLogout>
+      {nick}
+
       <img src={logo} alt="logo" className="mt-5 logo" />
     </StyledNavBar>
   );

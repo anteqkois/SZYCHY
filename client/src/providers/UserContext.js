@@ -42,7 +42,17 @@ export const UserProvider = ({ children }) => {
       });
   };
 
-  const handleSignup = () => {};
+  const handleSignup = async (values) => {
+    console.log(values);
+    await axios
+      .post('/api/v1/auth/signup', values)
+      .then((data) => {
+        history.push('/');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <UserContext.Provider

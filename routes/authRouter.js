@@ -11,8 +11,8 @@ router.get('/logout', authController.logout);
 router.post('/login', catchAsyncErrors(authController.login));
 router.post(
   '/signup',
-  catchAsyncErrors(authController.signup),
-  catchAsyncErrors(authController.login),
+  catchAsyncErrors(authController.signup)
+  // catchAsyncErrors(authController.login),
 );
 
 

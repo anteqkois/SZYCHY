@@ -15,12 +15,12 @@ const User = mongoose.Schema({
     required: [true, 'Wprowadź poprawną nazwę użytkownika'],
     unique: true,
     lowercase: true,
-    minlength: [6, 'Minimalna ilość znaków w nazwie to 6'],
+    minlength: [2, 'Minimalna ilość znaków w nazwie to 6'],
   },
   password: {
     type: String,
     required: [true, 'Wprowadź hasło'],
-    minlength: [6, 'Minimalna ilość znaków w haśle to 6'],
+    minlength: [2, 'Minimalna ilość znaków w haśle to 6'],
   },
 });
 
