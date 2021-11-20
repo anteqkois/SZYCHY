@@ -81,7 +81,7 @@ function Navbar() {
     <StyledNavBar>
       <img src={logoText} className="logoText" alt="logoText" />
 
-      <StyledNavItem onClick={() => history.push('/main')}>
+      <StyledNavItem onClick={() => history.push('/post')}>
         <img src={homeIcon} className="ss" alt="icon" />
         <span>Strona główna</span>
       </StyledNavItem>
