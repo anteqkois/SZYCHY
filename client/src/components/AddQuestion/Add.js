@@ -36,7 +36,11 @@ const AddQuestion = styled.form`
   }
 `;
 
-const TopicMessage = styled.a`
+const TopicMessage = styled.p`
+  margin-left: 2rem;
+  text-decoration: none;
+  font-family: inherit;
+  color: #fff;
   font-weight: 550;
   display: inline-block;
   align-items: center;
