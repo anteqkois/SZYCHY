@@ -4,7 +4,12 @@ import styled from "styled-components";
 const StyledContentPost = styled.p`
     ${({ theme }) => theme.typography.Body};
     display:block;
-    color:white;
+    color:#afafaf;
+    margin-top:5px;
+    padding: 0 5px;
+    &:hover{
+        cursor:default;
+    }
 `
 
 function ContentPost(props){

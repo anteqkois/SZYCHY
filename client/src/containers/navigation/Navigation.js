@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const StyledNavBar = styled.div`
   padding: ${({ theme }) => theme.spacing.xl1};
-  color: ${({ theme }) => theme.colors.textOnBackground};
   ${({ theme }) => theme.typography.H6};
   /* background: linear-gradient(130deg, ${({ theme }) => theme.colors.surface} 20%, ${({ theme }) => theme.colors.primary} 100%); */
   background:#0d1117;

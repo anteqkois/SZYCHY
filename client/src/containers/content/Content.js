@@ -5,13 +5,19 @@ import Post from "./posts/Post";
 const StyledContent = styled.div`
     margin-left:300px;
     color:white;
-    text-align: center;
-    
+    margin-top:60px;
 `;
 
 function Content(){
     return(
         <StyledContent>
+            <Post title="Funckja kwadratowa" contentPost="W dwóch hotelach wybudowano prostokątne baseny. Basen w pierwszym hotelu ma powierzchnię 240 m2. Basen w drugim hotelu ma powierzchnię 350 m2 oraz jest o 5 m dłuższy i 2 m szerszy niż w pierwszym hotelu. Oblicz, jakie wymiary mogą mieć baseny w obu hotelach. Podaj wszystkie możliwe odpowiedzi." category="matematyka"></Post>
+            <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
+            <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
+            <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
+            <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
+            <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
+            <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
             <Post title="Przykładowy tytuł" contentPost="przykładowa treść posta" category="matematyka"></Post>
         </StyledContent>
     );
