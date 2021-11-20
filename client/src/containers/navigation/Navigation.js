@@ -3,6 +3,11 @@ import styled from 'styled-components';
 import { UserContext } from './../../providers/UserContext';
 import { useHistory } from 'react-router-dom';
 import logo from '../../img/logo.png';
+import homeIcon from '../../icons/homeIcon.png';
+import discuss from '../../icons/discuss.png';
+import notes from '../../icons/notes.png';
+import question from '../../icons/question.png';
+import results from '../../icons/results.png';
 
 const StyledNavBar = styled.div`
   padding: ${({ theme }) => theme.spacing.xl1};
@@ -15,15 +20,26 @@ const StyledNavBar = styled.div`
   height: 100%;
   padding-top: 5vh;
   position: fixed;
+  .ss{
+    position:absolute;
+    left:-2px;
+    top:12px;
+  }
+  span{
+    padding-left:20px;
+  }
 `;
 
 const StyledNavItem = styled.a`
   padding: ${({ theme }) => theme.spacing.s};
   display: block;
   opacity: 0.9;
+  text-decoration:none;
+  position:relative;
   &:hover {
     cursor: pointer;
-    text-decoration: underline white;
+    color:white;
+    transition: 200ms;
     opacity: 1;
   }
 `;
@@ -63,13 +79,26 @@ function Navbar() {
         />
       </svg>
 
-      <StyledNavItem>Strona główna</StyledNavItem>
-      <StyledNavItem>Panel dyskusyjny</StyledNavItem>
-      <StyledNavItem onClick={() => history.push('/add')}>
-        Zadaj pytanie
+      <StyledNavItem>
+        <img src={homeIcon} className="ss" alt="icon"/>
+        <span>Strona główna</span>
+        </StyledNavItem>
+      <StyledNavItem>
+      <img src={discuss} className="ss" alt="icon"/>
+        <span>Panel dyskusyjny</span>
       </StyledNavItem>
-      <StyledNavItem onClick={() => history.push('')}>Moje wpisy</StyledNavItem>
-      <StyledNavItem>Statystyki</StyledNavItem>
+      <StyledNavItem onClick={() => history.push('/add')}>
+      <img src={question} className="ss" alt="icon"/>
+      <span>Zadaj pytanie</span>
+      </StyledNavItem>
+      <StyledNavItem onClick={() => history.push('')}>
+      <img src={notes} className="ss" alt="icon"/>
+        <span>Moje wpisy</span>
+        </StyledNavItem>
+      <StyledNavItem>
+      <img src={results} className="ss" alt="icon"/>
+        <span>Statystyki</span>
+      </StyledNavItem>
       <StyledNavLogout
         onClick={() => {
           handleLogout();
