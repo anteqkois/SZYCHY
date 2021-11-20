@@ -6,11 +6,7 @@ const CommentContainer = styled.div`
     width: 90%;
 `
 
-const Username = styled.p`
-    color: #BB86FC;
-`
-
-const TextContainer = styled.div`
+const Textarea = styled.textarea`
     color: #fff;
     background: #121212;
     box-shadow: 0 2px 4px 0 #3700B3;
@@ -26,22 +22,29 @@ const TextContainer = styled.div`
     }
 `
 
-const Section = styled.p`
-    font-size: 2rem;
-    padding: 1rem;
+const AddButton = styled.button`
+    background: #3700B3;
+    color: #fff;
+    padding-bottom: 30px;
+    font-size: 1.7rem;
+    width: 38px;
+    height: 38px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin: 6.8rem 0 0 2rem;
+    position: absolute;
 `
 
-function Comment() {
+function AddComment() {
     return (
         <>
             <CommentContainer>
-                <Username>Kniaź Jarema</Username>
-                <TextContainer>
-                    <Section />
-                </TextContainer>
+                <Textarea />
+                <AddButton>+</AddButton>
             </CommentContainer>
         </>
     )
 }
 
-export default Comment
+export default AddComment

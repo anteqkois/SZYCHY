@@ -12,10 +12,11 @@ const StyledHeader = styled.div`
     width:calc(100% - 300px);
     padding:0.5vw 2vw;
     position: sticky;
-    /* display:flex;
-    justify-content: space-between;
-    align-items: center; */
-    `;
+    @media screen and (max-width: 764px) {
+    margin-left: 0;
+    width: 100%;
+  }
+`
 
 const HeaderButton = styled.div`
     ${({ theme }) => theme.typography.H6};

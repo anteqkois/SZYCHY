@@ -7,6 +7,11 @@ const StyledContent = styled.div`
   margin-left: 300px;
   color: white;
   margin-top: 60px;
+
+  @media screen and (max-width: 764px) {
+    margin-left: 0;
+    width: 100%;
+  }
 `;
 
 const initialPost = [
