@@ -1,10 +1,29 @@
 import React from "react";
+import styled from "styled-components";
 // import Post from "../containers/content/posts/Post";
 import Content from '../containers/content/Content';
 import ContentCategories from '../containers/content/ContentCategories';
 import Header from '../containers/header/Header';
 import Navbar from "../containers/navigation/Navigation";
+import Arrow from '../icons/arrow.png'
 
+const ToUpContainer = styled.button`
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  bottom: 35px;
+  right: 35px;
+  background: #3700B3;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+`
+
+const ArrowIcon = styled.img`
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+`
 
 // function Main(){
 //     return(
@@ -32,6 +51,10 @@ function Main({ match }) {
         ) : (
           <Content />
         )}
+
+        <ToUpContainer>
+          <ArrowIcon src={Arrow}></ArrowIcon>
+        </ToUpContainer>
       </div>
     </div>
   );

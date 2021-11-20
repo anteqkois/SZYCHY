@@ -60,6 +60,7 @@ const StyledNavLogout = styled.button`
   padding: ${({ theme }) => theme.spacing.s};
   border-radius: 2px;
   display: block;
+  font-family: inherit;
   font-size: 15px;
   margin-top: 5rem;
   margin-bottom: -1rem;

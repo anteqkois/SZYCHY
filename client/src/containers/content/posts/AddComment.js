@@ -2,32 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CommentContainer = styled.div`
+  background: #191919;
+  border-radius: 10px;
   margin-top: 5rem;
   width: 90%;
 `;
 
-const Textarea = styled.div`
+const TextContainer = styled.div`
   color: #fff;
-  background: #121212;
-  box-shadow: 0 2px 4px 0 #3700b3;
   padding: 0.7rem;
   width: 50vw;
   height: 15vh;
   resize: none;
   border: none;
   outline: none;
+`;
 
-  &:focus {
-    background: #0b0b0b;
-  }
+const NickContainer = styled.div`
+  color: #BB86FC;
+  width: 50vw;
+  padding: 0.7rem;
+  border: none;
 `;
 
 function AddComment({ nick, content }) {
   return (
     <>
       <CommentContainer>
-        {nick}
-        <Textarea>{content}</Textarea>
+        <NickContainer>{nick}</NickContainer>
+        <TextContainer>{content}</TextContainer>
       </CommentContainer>
     </>
   );
