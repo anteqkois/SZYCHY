@@ -20,6 +20,7 @@ export const UserProvider = ({ children }) => {
       .then((data) => {
         setUser(data.data);
         sessionStorage.setItem('isLogined', true);
+        sessionStorage.setItem('nick', data.data.nick);
         history.push('/post');
       })
       .catch((error) => {
@@ -33,6 +34,7 @@ export const UserProvider = ({ children }) => {
       .then((data) => {
         setUser(initialUser);
         sessionStorage.removeItem('isLogined');
+        sessionStorage.removeItem('nick');
         history.push('/');
       })
       .catch((error) => {
