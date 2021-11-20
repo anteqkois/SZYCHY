@@ -7,6 +7,7 @@ const StyledContentPost = styled.p`
     color:#afafaf;
     margin-top:5px;
     padding: 0 5px;
+    text-indent:10px;
     &:hover{
         cursor:default;
     }
