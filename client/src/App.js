@@ -41,9 +41,12 @@ function App() {
               <ScrollToTop />
               <Switch>
                 <Route exact path="/" component={Login} />
-                <PrivateRoute exact path="/add" component={Add} />
+                <Route exact path="/add" component={Add} />
+                <Route exact path="/main" component={Main} />
+                <Route exact path="/add" component={Add} />
+                {/* <PrivateRoute exact path="/add" component={Add} />
                 <PrivateRoute exact path="/main" component={Main} />
-                <PrivateRoute exact path="/add" component={Add} />
+                <PrivateRoute exact path="/add" component={Add} /> */}
                 {/* <Route path="*" component={NotFound} /> */}
               </Switch>
             </MainLayout>

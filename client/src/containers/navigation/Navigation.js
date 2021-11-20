@@ -79,26 +79,26 @@ function Navbar() {
   const { handleLogout } = useContext(UserContext);
   return (
     <StyledNavBar>
-      <img src={logoText} className="logoText" alt="logoText"/>
+      <img src={logoText} className="logoText" alt="logoText" />
 
-      <StyledNavItem>
-        <img src={homeIcon} className="ss" alt="icon"/>
+      <StyledNavItem onClick={() => history.push('/main')}>
+        <img src={homeIcon} className="ss" alt="icon" />
         <span>Strona główna</span>
-        </StyledNavItem>
-      <StyledNavItem>
-      <img src={discuss} className="ss" alt="icon"/>
+      </StyledNavItem>
+      <StyledNavItem onClick={() => history.push('/discussion')}>
+        <img src={discuss} className="ss" alt="icon" />
         <span>Panel dyskusyjny</span>
       </StyledNavItem>
       <StyledNavItem onClick={() => history.push('/add')}>
-      <img src={question} className="ss" alt="icon"/>
-      <span>Zadaj pytanie</span>
+        <img src={question} className="ss" alt="icon" />
+        <span>Zadaj pytanie</span>
       </StyledNavItem>
-      <StyledNavItem onClick={() => history.push('')}>
-      <img src={notes} className="ss" alt="icon"/>
+      <StyledNavItem onClick={() => history.push('/mypost')}>
+        <img src={notes} className="ss" alt="icon" />
         <span>Moje wpisy</span>
-        </StyledNavItem>
-      <StyledNavItem>
-      <img src={results} className="ss" alt="icon"/>
+      </StyledNavItem>
+      <StyledNavItem onClick={() => history.push('/statistic')}>
+        <img src={results} className="ss" alt="icon" />
         <span>Statystyki</span>
       </StyledNavItem>
       <StyledNavLogout
@@ -108,7 +108,7 @@ function Navbar() {
       >
         Wyloguj się
       </StyledNavLogout>
-      <img src={logo} alt="logo" className="mt-5 logo"/>
+      <img src={logo} alt="logo" className="mt-5 logo" />
     </StyledNavBar>
   );
 }
