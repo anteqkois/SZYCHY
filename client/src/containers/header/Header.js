@@ -27,9 +27,13 @@ const HeaderButton = styled.div`
   margin: 15px;
   color: white;
   opacity: 0.9;
+  text-align:center;
+  border-bottom: 2px solid transparent;
   &:hover {
+    transition: 200ms all;
     cursor: pointer;
     opacity: 1;
+    border-bottom: 2px solid #3700b3;
   }
 `;
 

@@ -10,6 +10,7 @@ import notes from '../../icons/notes.png';
 import question from '../../icons/question.png';
 import results from '../../icons/results.png';
 import logout from '../../icons/logout.png';
+import user from '../../icons/user.png';
 
 const StyledNavBar = styled.div`
   padding: ${({ theme }) => theme.spacing.xl1};
@@ -112,7 +113,7 @@ const UsernameContainer = styled.div`
 
 const Username = styled.p`
   font-size: 1rem;
-  color: #bb86fc;
+  color: white;
 `;
 
 function Navbar() {
@@ -159,10 +160,11 @@ function Navbar() {
       </StyledNavLogout>
 
       <MessageContainer>
-        <Message>Zalogowano jako:</Message>
+        <Message className="text-center">Zalogowano jako:</Message>
       </MessageContainer>
-      <UsernameContainer>
-        <Username>{nick}</Username>
+      <UsernameContainer className="text-center">
+        <img src={user} alt="logo" className="userIcon me-2"/>
+        <Username className="userIcon d-inline">{nick}</Username>
       </UsernameContainer>
 
       <img src={logo} alt="logo" className="logo" />
