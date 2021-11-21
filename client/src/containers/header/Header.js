@@ -19,7 +19,7 @@ const StyledHeader = styled.div`
   }
 `
 
-const HeaderButton = styled.div`
+const HeaderButton = styled.a`
   ${({ theme }) => theme.typography.H6};
   width: 100%;
   display: inline;
@@ -29,6 +29,10 @@ const HeaderButton = styled.div`
   opacity: 0.9;
   text-align:center;
   border-bottom: 2px solid transparent;
+  text-decoration:none;
+  &:active{
+    color:red;
+  }
   &:hover {
     transition: 200ms all;
     cursor: pointer;
@@ -45,7 +49,7 @@ function Header() {
   const history = useHistory();
   return (
     <StyledHeader>
-      <HeaderButton
+      <HeaderButton className="route"
         onClick={() => {
           history.push('/post/matematyka');
           reload();
@@ -53,7 +57,7 @@ function Header() {
       >
         Matematyka
       </HeaderButton>
-      <HeaderButton
+      <HeaderButton className="route"
         onClick={() => {
           history.push('/post/polski');
           reload();
@@ -61,7 +65,7 @@ function Header() {
       >
         Polski
       </HeaderButton>
-      <HeaderButton
+      <HeaderButton className="route"
         onClick={() => {
           history.push('/post/angielski');
           reload();
@@ -69,7 +73,7 @@ function Header() {
       >
         Angielski
       </HeaderButton>
-      <HeaderButton
+      <HeaderButton className="route"
         onClick={() => {
           history.push('/post/programowanie');
           reload();
@@ -77,7 +81,7 @@ function Header() {
       >
         Programowanie
       </HeaderButton>
-      <HeaderButton
+      <HeaderButton className="route"
         onClick={() => {
           history.push('/post/informatyka');
           reload();
@@ -85,7 +89,7 @@ function Header() {
       >
         Informatyka
       </HeaderButton>
-      <HeaderButton
+      <HeaderButton className="route"
         onClick={() => {
           history.push('/post/mechatronika');
           reload();
