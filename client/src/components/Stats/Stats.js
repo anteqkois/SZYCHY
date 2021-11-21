@@ -4,7 +4,7 @@ import { ResponsiveLine } from '@nivo/line';
 
 const data = [
   {
-    id: 'Antek',
+    id: 'codingnight',
     color: 'hsl(185, 70%, 50%)',
     data: [
       {
@@ -30,7 +30,7 @@ const data = [
     ],
   },
   {
-    id: 'Michał',
+    id: 'jannowak',
     color: 'hsl(185, 70%, 50%)',
     data: [
       {
@@ -56,7 +56,7 @@ const data = [
     ],
   },
   {
-    id: 'Wojtek',
+    id: 'michal123',
     color: 'hsl(185, 70%, 50%)',
     data: [
       {
@@ -82,7 +82,7 @@ const data = [
     ],
   },
   {
-    id: 'Łukasz',
+    id: 'janek123',
     color: 'hsl(185, 70%, 50%)',
     data: [
       {
@@ -184,7 +184,7 @@ function Stats() {
       <Navbar />
       <div style={{ marginLeft: '300px' }}>
         <h1 className="text-center p-5">
-          Sprawdź wyniki twoich znajomych z ostatnich 7 dni
+          Zobacz najczęściej odpowiadających użytkowników
         </h1>
         <div className="p-5 text-dark bg-light" style={{ height: '80vh' }}>
           <MyResponsiveLine data={data} />

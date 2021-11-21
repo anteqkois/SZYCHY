@@ -25,19 +25,6 @@ const ArrowIcon = styled.img`
   margin-bottom: 1rem;
 `;
 
-// function Main(){
-//     return(
-//         <div className="row">
-//             <div className="col-3">
-//                 <Navbar />
-//             </div>
-//             <div>
-//                 <Header />
-//                 <Content />
-//             </div>
-//         </div>
-//     );
-
 function Main({ match }) {
   return (
     <div className="row">
