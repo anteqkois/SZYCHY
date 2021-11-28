@@ -8,19 +8,19 @@ const User = mongoose.Schema({
     required: [true, 'E-mail jest wymagany'],
     unique: true,
     lowercase: true,
-    validate: [validator.isEmail, 'Wprowadź e-mail'],
+    validate: [validator.isEmail, 'Niepoprawny e-mail'],
   },
   nick: {
     type: String,
-    required: [true, 'Wprowadź poprawną nazwę użytkownika'],
+    required: [true, 'Wprowadź nazwę'],
     unique: true,
     lowercase: true,
-    minlength: [2, 'Minimalna ilość znaków w nazwie to 6'],
+    minlength: [6, 'Minimalna ilość znakó nazwy to 6'],
   },
   password: {
     type: String,
     required: [true, 'Wprowadź hasło'],
-    minlength: [2, 'Minimalna ilość znaków w haśle to 6'],
+    minlength: [6, 'Minimalna ilość znaków w haśle to 6'],
   },
 });
 

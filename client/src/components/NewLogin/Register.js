@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { useFormik } from 'formik';
-import axios from 'axios';
 import { UserContext } from './../../providers/UserContext';
 import { useHistory } from 'react-router-dom';
 
@@ -76,6 +75,14 @@ const StyledForm = styled.form`
   }
 `;
 
+const StyledError = styled.p`
+  padding-left: 3rem;
+  width: 100%;
+  color: red;
+${({theme})=>theme.typography.body2};
+text-transform: lowercase;
+`;
+
 const LoginWith = styled.h5`
   margin: 20px 20px 0 20px;
   cursor: pointer;
@@ -86,15 +93,12 @@ const LogoContainer = styled.div`
   height: 200px;
 `;
 
-const Motto = styled.p`
-  text-align: center;
-  padding: 0 3rem 2rem 3rem;
-  margin-top: -3rem;
-  font-size: 1rem;
-  font-family: inherit;
-`;
-
 function Register() {
+  const [error, setError] = useState({
+    email: '',
+    nick: '',
+    password: '',
+  });
   const { handleSignup } = useContext(UserContext);
   const history = useHistory();
 
@@ -104,8 +108,11 @@ function Register() {
       nick: '',
       password: '',
     },
-    onSubmit: (values, { setSubmitting, resetForm }) => {
-      handleSignup(values);
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      handleSignup(values).then((result) => {
+        console.log(result);
+        setError(result);
+      });
     },
     enableReinitialize: true,
   });
@@ -132,6 +139,7 @@ function Register() {
           onChange={formik.handleChange}
           value={formik.values.email}
         />
+        {error.email && <StyledError>{error.email}</StyledError>}
         <input
           type="text"
           placeholder="Nick"
@@ -140,6 +148,7 @@ function Register() {
           onChange={formik.handleChange}
           value={formik.values.nick}
         />
+        {error.nick && <StyledError>{error.nick}</StyledError>}
         <input
           type="password"
           placeholder="Password"
@@ -148,10 +157,9 @@ function Register() {
           onChange={formik.handleChange}
           value={formik.values.password}
         />
+        {error.password && <StyledError>{error.password}</StyledError>}
         <button type="submit">Załóż konto !</button>
-        <LoginWith onClick={() => history.push('/')}>
-          Zaloguj się !
-        </LoginWith>
+        <LoginWith onClick={() => history.push('/')}>Zaloguj się !</LoginWith>
 
         <LogoContainer>
           <svg

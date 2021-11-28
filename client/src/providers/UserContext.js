@@ -43,15 +43,15 @@ export const UserProvider = ({ children }) => {
   };
 
   const handleSignup = async (values) => {
-    console.log(values);
-    await axios
-      .post('/api/v1/auth/signup', values)
-      .then((data) => {
-        history.push('/');
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      await axios
+        .post('/api/v1/auth/signup', values)
+        .then((data) => {
+          history.push('/');
+        })
+    } catch (err) {
+      return err.response.data.errors;
+    }
   };
 
   return (
