@@ -31,7 +31,7 @@ const HeaderButton = styled.a`
   border-bottom: 2px solid transparent;
   text-decoration:none;
   &:active{
-    color:red;
+    color: #BB86FC;
   }
   &:hover {
     transition: 200ms all;

@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import Navbar from '../../containers/navigation/Navigation';
-
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { UserContext } from './../../providers/UserContext';
 import { useHistory } from 'react-router-dom';
+
 
 const AddQuestion = styled.form`
   float: right;
@@ -67,7 +67,7 @@ const Category = styled.div`
   box-shadow: 0 2px 4px 0 #3700b3;
   cursor: pointer;
 
-  &:focus {
+  &:focus{
     background: #3700b3;
   }
 `;
@@ -135,6 +135,7 @@ function Add() {
     },
     enableReinitialize: true,
   });
+
   return (
     <>
       <Navbar />
@@ -148,23 +149,24 @@ function Add() {
           onChange={formik.handleChange}
           value={formik.values.title}
         />
+
         <CategoryContainer>
-          <Category tabIndex={1} onClick={() => setCategory('matematyka')}>
+          <Category tabIndex={1} onClick={() => {setCategory('matematyka')}}>
             Matematyka
           </Category>
-          <Category tabIndex={1} onClick={() => setCategory('polski')}>
+          <Category tabIndex={1} onClick={() => {setCategory('polski')}}>
             Polski
           </Category>
-          <Category tabIndex={1} onClick={() => setCategory('angielski')}>
+          <Category tabIndex={1} onClick={() => {setCategory('angielski')}}>
             Angielski
           </Category>
-          <Category tabIndex={1} onClick={() => setCategory('informatyka')}>
+          <Category tabIndex={1} onClick={() => {setCategory('informatyka')}}>
             Informatyka
           </Category>
-          <Category tabIndex={1} onClick={() => setCategory('programowanie')}>
+          <Category tabIndex={1} onClick={() => {setCategory('programowanie')}}>
             Programowanie
           </Category>
-          <Category tabIndex={1} onClick={() => setCategory('mechatronika')}>
+          <Category tabIndex={1} onClick={() => {setCategory('mechatronika')}}>
             Mechatronika
           </Category>
         </CategoryContainer>

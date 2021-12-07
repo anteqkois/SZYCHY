@@ -88,7 +88,7 @@ const LogoContainer = styled.div`
 
 const Motto = styled.p`
   text-align: center;
-  padding: 0 3rem 2rem 3rem;
+  padding: 2rem 3rem 2rem 3rem;
   margin-top: -3rem;
   font-size: 1rem;
   font-family: inherit;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../containers/navigation/Navigation';
 import { ResponsiveLine } from '@nivo/line';
+import styled from 'styled-components';
 
 const data = [
   {
