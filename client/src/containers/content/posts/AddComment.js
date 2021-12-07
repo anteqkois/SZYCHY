@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const CommentContainer = styled.div`
   background: #191919;
   border-radius: 10px;
-  margin-top: 5rem;
+  margin: 3rem 0 1.5rem 0;
   width: 90%;
 `;
 
@@ -12,7 +12,8 @@ const TextContainer = styled.div`
   color: #fff;
   padding: 0.7rem;
   width: 50vw;
-  height: 15vh;
+  height: fit-content;
+  min-height: 9vh;
   resize: none;
   border: none;
   outline: none;

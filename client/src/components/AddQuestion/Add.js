@@ -36,8 +36,14 @@ const AddQuestion = styled.form`
   }
 `;
 
+const TopicContainer = styled.div`
+  display: inline;
+  height: 10vh;
+`
+
 const TopicMessage = styled.p`
   margin-left: 2rem;
+  line-height: 10vh;
   text-decoration: none;
   font-family: inherit;
   color: #fff;
@@ -46,8 +52,14 @@ const TopicMessage = styled.p`
   align-items: center;
   width: 10vw;
   height: 60px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 `;
+
+const InputContainer = styled.div`
+  display: inline;
+  margin-left: 2rem;
+  line-height: 10vh;
+`
 
 const CategoryContainer = styled.div`
   width: 100%;
@@ -141,14 +153,20 @@ function Add() {
       <Navbar />
 
       <AddQuestion onSubmit={formik.handleSubmit}>
-        <TopicMessage>Tytuł:</TopicMessage>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          onChange={formik.handleChange}
-          value={formik.values.title}
-        />
+        <TopicContainer>
+          <TopicMessage>Tytuł:</TopicMessage>
+        </TopicContainer>
+
+        <InputContainer>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              onChange={formik.handleChange}
+              value={formik.values.title}
+            />
+          </InputContainer>
+        
 
         <CategoryContainer>
           <Category tabIndex={1} onClick={() => {setCategory('matematyka')}}>

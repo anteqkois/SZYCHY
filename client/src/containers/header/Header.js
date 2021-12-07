@@ -13,9 +13,10 @@ const StyledHeader = styled.div`
     width:calc(100% - 300px);
     padding:0.5vw 2vw;
     position: sticky;
+
     @media screen and (max-width: 764px) {
-    margin-left: 0;
-    width: 100%;
+      margin-left: 0;
+      width: 100%;
   }
 `
 

@@ -4,6 +4,7 @@ import Post from './posts/Post';
 import axios from 'axios';
 
 const StyledContent = styled.div`
+height: fit-content;
   margin-left: 300px;
   color: white;
   margin-top: 60px;
