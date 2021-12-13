@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Title from "../content/posts/Title";
-import ContentPost from "../content/posts/ContentPost";
-import User from "../content/posts/User";
+import Title from "../../components/utils/Title";
+import ContentPost from "../../components/utils/ContentPost";
+import User from "../../components/utils/User";
 import { useState } from "react";
-import AddCommentButton from "./AddCommentButton";
+import AddCommentButton from '../../components/utils/AddCommentButton';
 import Comment from "./Comment";
-import AddComment from "./AddComment";
 
 const StyledDiscussion = styled.div` 
     background:#222222;

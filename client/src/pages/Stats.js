@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../../containers/navigation/Navigation';
+import Navbar from '../components/Navigation/Navigation';
 import { ResponsiveLine } from '@nivo/line';
 import styled from 'styled-components';
 

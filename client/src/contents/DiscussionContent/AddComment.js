@@ -22,20 +22,6 @@ const Textarea = styled.div`
     }
 `
 
-const AddButton = styled.button`
-    background: #3700B3;
-    color: #fff;
-    padding-bottom: 30px;
-    font-size: 1.7rem;
-    width: 38px;
-    height: 38px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    margin: 6.8rem 0 0 2rem;
-    position: absolute;
-`
-
 function AddComment() {
     return (
         <>

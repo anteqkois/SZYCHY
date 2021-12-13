@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 // import Post from "../containers/content/posts/Post";
-import Content from '../containers/content/Content';
-import ContentCategories from '../containers/content/ContentCategories';
-import Header from '../containers/header/Header';
-import Navbar from '../containers/navigation/Navigation';
+import Content from '../contents/MainContent/Content';
+import ContentCategories from '../contents/MainContent/ContentCategories';
+import Header from '../components/Header/Header';
+import Navbar from '../components/Navigation/Navigation';
 import Arrow from '../icons/arrow.png';
 
 const ToUpContainer = styled.button`

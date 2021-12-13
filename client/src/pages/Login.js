@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { useFormik } from 'formik';
 import axios from 'axios';
-import { UserContext } from './../../providers/UserContext';
+import { UserContext } from '../providers/UserContext';
 import { useHistory } from 'react-router-dom';
 
 const StyledContainer = styled.div`

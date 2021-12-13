@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Post from './posts/Post';
+import Post from './MainContentComponents/Post';
 import axios from 'axios';
 
 const StyledContent = styled.div`
@@ -18,13 +18,14 @@ const initialPost = [
   },
 ];
 
-function ContentCategories({category}) {
+function ContentUser({user}) {
   const [post, setPost] = useState(initialPost);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(`/api/v1/post/${category}`);
+      const { data } = await axios.get(`/api/v1/post/user/${user}`);
+      console.log(await axios.get(`/api/v1/post/user/${user}`));
       setPost(data);
       setIsLoading(false);
     })();
@@ -46,4 +47,4 @@ function ContentCategories({category}) {
   );
 }
 
-export default ContentCategories;
+export default ContentUser;

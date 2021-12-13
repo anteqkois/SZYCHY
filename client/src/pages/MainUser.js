@@ -1,8 +1,8 @@
 import React from 'react';
 // import Post from "../containers/content/posts/Post";
-import Header from '../containers/header/Header';
-import Navbar from '../containers/navigation/Navigation';
-import ContentUser from './../containers/content/ContentUser';
+import Header from '../components/Header/Header';
+import Navbar from '../components/Navigation/Navigation';
+import ContentUser from './../contents/MainContent/ContentUser';
 
 // function Main(){
 //     return(

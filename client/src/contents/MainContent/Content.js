@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Post from './posts/Post';
+import Post from './MainContentComponents/Post';
 import axios from 'axios';
 
 const StyledContent = styled.div`

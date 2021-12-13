@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../containers/navigation/Navigation";
-import Header from "../containers/header/Header";
-import ContentDiscussion from "../containers/discussion/ContentDiscussion";
+import Navbar from "../components/Navigation/Navigation";
+import Header from "../components/Header/Header";
+import ContentDiscussion from "../contents/DiscussionContent/ContentDiscussion";
 
 function Discussion(){
     return(

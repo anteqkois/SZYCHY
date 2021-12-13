@@ -1,14 +1,12 @@
 import React from 'react';
-import ContentPost from './ContentPost';
-import Title from './Title';
+import ContentPost from '../../../components/utils/ContentPost';
+import Title from '../../../components/utils/Title';
 import Category from './Category';
 import styled from 'styled-components';
-import User from './User';
-import Answer from './Answer';
+import User from '../../../components/utils/User';
 import Comment from './Comment';
 import AddComment from './AddComment';
-import AddCommentButton from './AddCommentButton';
-import AddCloseCommentButton from './CloseAddCommentButton';
+import AddCommentButton from '../../../components/utils/AddCommentButton';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 

@@ -14,12 +14,12 @@ import MainLayout from './layouts/MainLayout';
 import ScrollToTop from './components/utils/ScrollToTop';
 
 // import NotFound from './components/utils/NotFound';
-import Login from './components/NewLogin/Login.js';
+import Login from './pages/Login.js';
 import Main from './pages/Main';
 import MainUser from './pages/MainUser';
-import Add from './components/AddQuestion/Add';
-import Stats from './components/Stats/Stats.js';
-import Register from './components/NewLogin/Register';
+import Add from './pages/Add';
+import Stats from './pages/Stats.js';
+import Register from './pages/Register';
 import Discussion from './pages/Discussion';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (

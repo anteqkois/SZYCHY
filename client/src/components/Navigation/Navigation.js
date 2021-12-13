@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { UserContext } from './../../providers/UserContext';
+import { UserContext } from '../../providers/UserContext';
 import { useHistory } from 'react-router-dom';
 import logo from '../../img/logo.png';
 import logoText from '../../img/logoText.png';
