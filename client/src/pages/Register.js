@@ -20,7 +20,7 @@ const StyledContainer = styled.div`
     width: 80%;
     height: 3rem;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0.6rem;
     border: none;
     outline: none;
     color: #fff;
@@ -58,7 +58,7 @@ const StyledForm = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 20px;
   height: 80vh;
   width: 30vw;
   background: rgba(255, 255, 255, 0.15);
@@ -70,22 +70,32 @@ const StyledForm = styled.form`
   text-transform: uppercase;
   letter-spacing: 0.4rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     width: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
   }
 `;
 
 const StyledError = styled.p`
   padding-left: 3rem;
+  margin: 0.2rem 0;
   width: 100%;
   color: red;
-${({theme})=>theme.typography.body2};
-text-transform: lowercase;
+  ${({theme})=>theme.typography.body2};
+  text-transform: lowercase;
 `;
 
 const LoginWith = styled.h5`
   margin: 20px 20px 0 20px;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+  }  
 `;
 
 const LogoContainer = styled.div`
@@ -158,8 +168,8 @@ function Register() {
           value={formik.values.password}
         />
         {error.password && <StyledError>{error.password}</StyledError>}
-        <button type="submit">Załóż konto !</button>
-        <LoginWith onClick={() => history.push('/')}>Zaloguj się !</LoginWith>
+        <button type="submit">Załóż konto!</button>
+        <LoginWith onClick={() => history.push('/')}>Zaloguj się!</LoginWith>
 
         <LogoContainer>
           <svg

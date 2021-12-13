@@ -52,6 +52,11 @@ const StyledContainer = styled.div`
     margin-top: 1rem;
     border-radius: 2rem;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+    }
   }
 `;
 
@@ -71,19 +76,32 @@ const StyledForm = styled.form`
   text-transform: uppercase;
   letter-spacing: 0.4rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1025px) {
     width: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
   }
 `;
 
 const LoginWith = styled.h5`
   margin: 20px 20px 0 20px;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+  }  
 `;
 
 const LogoContainer = styled.div`
   margin: auto;
   height: 200px;
+
+  @media screen and (max-width: 768px) {
+    height: 130px;
+  }
 `;
 
 const Motto = styled.p`
@@ -92,7 +110,21 @@ const Motto = styled.p`
   margin-top: -3rem;
   font-size: 1rem;
   font-family: inherit;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+    margin: 0.1rem 0;
+  }
 `;
+
+// const StyledError = styled.p`
+//   padding-left: 3rem;
+//   margin: 0.2rem 0;
+//   width: 100%;
+//   color: red;
+//   ${({theme})=>theme.typography.body2};
+//   text-transform: lowercase;
+// `;
 
 function Login() {
   const { handleLogin } = useContext(UserContext);
