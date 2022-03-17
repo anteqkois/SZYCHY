@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navigation/Navigation';
 import { ResponsiveLine } from '@nivo/line';
-import styled from 'styled-components';
 
 const data = [
   {
@@ -10,23 +9,19 @@ const data = [
     data: [
       {
         x: 'Matematyka',
-        y: 100,
+        y: 0,
       },
       {
         x: 'Język Polski',
-        y: 40,
+        y: 0,
       },
       {
         x: 'Język Angielski',
-        y: 90,
+        y: 1,
       },
       {
         x: 'Programowanie',
-        y: 100,
-      },
-      {
-        x: 'Język Nimiecki',
-        y: 95,
+        y: 2,
       },
     ],
   },
@@ -36,75 +31,107 @@ const data = [
     data: [
       {
         x: 'Matematyka',
-        y: 85,
+        y: 1,
       },
       {
         x: 'Język Polski',
-        y: 65,
+        y: 1,
       },
       {
         x: 'Język Angielski',
-        y: 70,
+        y: 1,
       },
       {
         x: 'Programowanie',
-        y: 100,
+        y: 1,
+      },
+    ],
+  },
+  {
+    id: 'juliawozniak',
+    color: 'hsl(185, 70%, 50%)',
+    data: [
+      {
+        x: 'Matematyka',
+        y: 1,
       },
       {
-        x: 'Język Nimiecki',
+        x: 'Język Polski',
+        y: 2,
+      },
+      {
+        x: 'Język Angielski',
+        y: 0,
+      },
+      {
+        x: 'Programowanie',
+        y: 1,
+      },
+    ],
+  },
+  {
+    id: 'majazielinska',
+    color: 'hsl(185, 70%, 50%)',
+    data: [
+      {
+        x: 'Matematyka',
+        y: 0,
+      },
+      {
+        x: 'Język Polski',
+        y: 1,
+      },
+      {
+        x: 'Język Angielski',
+        y: 1,
+      },
+      {
+        x: 'Programowanie',
+        y: 1,
+      },
+    ],
+  },
+  {
+    id: 'antoniwisniewski',
+    color: 'hsl(240, 40%, 50%)',
+    data: [
+      {
+        x: 'Matematyka',
+        y: 1,
+      },
+      {
+        x: 'Język Polski',
+        y: 1,
+      },
+      {
+        x: 'Język Angielski',
+        y: 0,
+      },
+      {
+        x: 'Programowanie',
         y: 0,
       },
     ],
   },
   {
-    id: 'michal123',
-    color: 'hsl(185, 70%, 50%)',
+    id: 'krzysztofkowalski',
+    color: 'hsl(340, 50%, 70%)',
     data: [
       {
         x: 'Matematyka',
-        y: 97,
+        y: 0,
       },
       {
         x: 'Język Polski',
-        y: 80,
+        y: 1,
       },
       {
         x: 'Język Angielski',
-        y: 100,
+        y: 0,
       },
       {
         x: 'Programowanie',
-        y: 80,
-      },
-      {
-        x: 'Język Nimiecki',
-        y: 40,
-      },
-    ],
-  },
-  {
-    id: 'janek123',
-    color: 'hsl(185, 70%, 50%)',
-    data: [
-      {
-        x: 'Matematyka',
-        y: 50,
-      },
-      {
-        x: 'Język Polski',
-        y: 68,
-      },
-      {
-        x: 'Język Angielski',
-        y: 31,
-      },
-      {
-        x: 'Programowanie',
-        y: 90,
-      },
-      {
-        x: 'Język Nimiecki',
-        y: 15,
+        y: 1,
       },
     ],
   },
@@ -118,7 +145,7 @@ const MyResponsiveLine = ({ data }) => (
     yScale={{
       type: 'linear',
       min: 0,
-      max: 100,
+      max: 2,
       stacked: false,
       reverse: false,
     }}

@@ -14,7 +14,7 @@ const urlLocalDatabase = `mongodb://localhost:27017/exampleDatabase`;
 
 const url =
   process.env.DB_MODULE === 'production'
-    ? `mongodb+srv://${dbUser}:${dbPassword}@${dbName}.hgtjf.mongodb.net/${dbName}?retryWrites=true&w=majority`
+    ? `mongodb+srv://${dbUser}:${dbPassword}@${dbName}.ffjgf.mongodb.net/${dbName}?retryWrites=true&w=majority`
     : urlLocalDatabase;
 
 // const database = () => {
@@ -25,11 +25,11 @@ const url =
 //       useUnifiedTopology: true,
 //       useFindAndModify: false,
 //     });
-//     console.log(Server connected with database);
+//     console.log(`Server connected with database`);
 //     // return database;
 //   } catch (error) {
 //     console.log(
-//       Server can't connected with database, error message: ${error},
+//       `Server can't connected with database, error message: ${error}`,
 //     );
 //   }
 // };

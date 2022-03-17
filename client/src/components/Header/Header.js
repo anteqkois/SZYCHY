@@ -31,14 +31,12 @@ const HeaderButton = styled.a`
   text-align:center;
   border-bottom: 2px solid transparent;
   text-decoration:none;
-  &:active{
-    color: #BB86FC;
-  }
   &:hover {
     transition: 200ms all;
     cursor: pointer;
     opacity: 1;
-    border-bottom: 2px solid #3700b3;
+    border-bottom: 1px solid #BB86FC;
+    color: #BB86FC;
   }
 `;
 
