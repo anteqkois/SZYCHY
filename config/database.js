@@ -14,8 +14,10 @@ const urlLocalDatabase = `mongodb://localhost:27017/exampleDatabase`;
 
 const url =
   process.env.DB_MODULE === 'production'
-    ? `mongodb+srv://${dbUser}:${dbPassword}@${dbName}.hgtjf.mongodb.net/${dbName}?retryWrites=true&w=majority`
+    ? `mongodb+srv://${dbUser}:${dbPassword}@${dbName}.r4eip.mongodb.net/?retryWrites=true&w=majority`
     : urlLocalDatabase;
+
+    
 
 // const database = () => {
 //   try {
